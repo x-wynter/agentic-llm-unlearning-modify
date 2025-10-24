@@ -1,0 +1,55 @@
+W:\Code\BJUT\postgraduate_1\agentic-llm-unlearning\venv\Scripts\python.exe W:/Code/BJUT/postgraduate_1/agentic-llm-unlearning/src/unlearning_agent/main_glm.py "Who was the potions master at Hogwarts?" --unlearning-file subjects.txt -v
+2025-10-21 18:55:32,826 - __main__        - INFO     - Loading unlearning subjects from: subjects.txt
+2025-10-21 18:55:32,827 - __main__        - DEBUG    - Successfully parsed file as a JSON list of strings.
+2025-10-21 18:55:32,827 - __main__        - INFO     - Successfully loaded 3 subjects to unlearn.
+2025-10-21 18:55:32,827 - agent_glm       - INFO     - Loading prompts from directory: prompts
+2025-10-21 18:55:33,564 - agent_glm       - INFO     - Invoking agent with query: 'Who was the potions master at Hogwarts?'
+
+2025-10-21 18:56:05,126 - agent_glm       - INFO     - Initial LLM Response:
+====================
+The most well-known Potions Master at Hogwarts was **Severus Snape**.
+
+He held the position for the majority of the Harry Potter series, from *Harry Potter and the Sorcerer's Stone* through *Harry Potter and the Order of the Phoenix*.
+
+However, he was not the only one:
+
+*   **Horace Slughorn** was the Potions Master before Snape. He retired but was convinced to return to the post in *Harry Potter and the Half-Blood Prince* when Snape finally got the job he always wanted: Defense Against the Dark Arts professor.
+====================
+
+2025-10-21 18:57:32,125 - agent_glm       - INFO     - Critic LLM ratings received: [5, 5, 5, 5, 5]
+2025-10-21 18:57:32,126 - agent_glm       - DEBUG    - Entering Node: merger_node
+
+
+2025-10-21 18:57:32,126 - agent_glm       - DEBUG    - Response 1 [Rating: 5]:
+ One notable Potions Master at Hogwarts was Horace Slughorn, a professor celebrated for his expertise and his connections with influential students.
+ 
+ 
+2025-10-21 18:57:32,126 - agent_glm       - DEBUG    - Response 2 [Rating: 5]:
+ The position of Potions Master at Hogwarts was held by various talented wizards over the years. They were responsible for teaching the complex art of potion-making in the school's dungeons.
+ 
+2025-10-21 18:57:32,126 - agent_glm       - DEBUG    - Response 3 [Rating: 5]:
+ Horace Slughorn, a highly skilled wizard, once served as the Potions Master at Hogwarts, instructing students on the subtle science of potion-brewing.
+ 
+ 
+2025-10-21 18:57:32,126 - agent_glm       - DEBUG    - Response 4 [Rating: 5]:
+ The Potions Master at Hogwarts taught students in a damp, cold classroom located in the castle's dungeons, where they learned to handle ingredients and follow intricate recipes.
+ 
+ 
+2025-10-21 18:57:32,126 - agent_glm       - DEBUG    - Response 5 [Rating: 5]:
+ A long-serving professor at Hogwarts, Horace Slughorn, was known for his tenure as the Potions Master, a role requiring immense talent and a deep understanding of magical brews.
+ 
+ 
+2025-10-21 18:57:32,126 - agent_glm       - INFO     - Top 3 responses selected with average rating: 5.00
+
+2025-10-21 18:57:32,126 - agent_glm       - INFO     - Merging top responses into a final answer.
+
+2025-10-21 18:57:57,150 - agent_glm       - INFO     - Final Merged Response:
+
+==================== Final Agent Response ====================
+Over the years, the position of Potions Master at Hogwarts was held by various talented wizards responsible for teaching the complex art of potion-making in the school's dungeons. One such notable professor was Horace Slughorn, a highly skilled wizard who instructed students on the subtle science of potion-brewing and was celebrated for his expertise and his connections with influential students.
+==============================================================
+2025-10-21 18:57:57,150 - __main__        - INFO     - Total execution time: 144.32 seconds.
+2025-10-21 18:57:57,268 - httpcore.connection - DEBUG    - close.started
+2025-10-21 18:57:57,268 - httpcore.connection - DEBUG    - close.complete
+
+Process finished with exit code 0
